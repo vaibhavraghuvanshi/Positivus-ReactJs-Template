@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 import { Link } from 'react-scroll';
+import { easeInOut, motion } from 'framer-motion';
 
 const Header = () => {
+
   return (
-    <div className='header'>
+    <motion.div className='header'
+    initial={{y: "-80vh"}}
+    animate={{y: 0, transition:{ease: easeInOut,delay: 0.2, type: "spring", bounceStiffness:300}}}
+    >
       <div className="logo">
         <img src={logo} alt="logo" className='img-fluid' />
       </div>
@@ -18,7 +23,7 @@ const Header = () => {
           <li><Link to="request-quote" smooth={true} duration={500} className='buttonQuote'>Request a quote</Link></li>
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 }
 

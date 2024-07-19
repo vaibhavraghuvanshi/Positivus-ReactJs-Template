@@ -152,7 +152,9 @@ line-height: 30px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 50px;
 }
+
 .client_logo img {
   filter: grayscale(1);
   transition: all ease-in 300ms;
