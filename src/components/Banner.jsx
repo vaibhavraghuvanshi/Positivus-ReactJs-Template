@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 const Banner = () => {
 
   return (
-    <section className="banner container" id="home">
+    <section className="banner" id="home">
+      <div className="container">
       <motion.div className="row">
         <motion.div
-          className="col-md-6 col-sm-12 p-0"
+          className="col-sm-12 col-lg-6 col-sm-12 p-0"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeIn", delay: 0.3, duration: 1 }}
@@ -27,17 +28,18 @@ const Banner = () => {
         </motion.div>
 
         <motion.div
-          className="col-md-6 col-sm-12 p-0"
+          className="col-sm-12 col-lg-6 col-sm-12 p-0"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeIn", duration: 1 }}
         >
-          <div className="img-wrapper">
-            <img src={banner} alt="Banner Img" className="img-fluid"/>
+          <div className="img-wrapper text-center">
+            <img src={banner} alt="Banner Img"/>
           </div>
         </motion.div>
 
       </motion.div>
+      </div>
     </section>
   );
 };

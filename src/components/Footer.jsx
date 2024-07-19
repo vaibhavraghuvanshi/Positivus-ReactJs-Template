@@ -10,10 +10,10 @@ const Footer = () => {
     <section className='footer'>
       <div className="container">
         <div className="row mb-4 align-items-center">
-            <div className="col-md-3">
+            <div className="col-3 col-lg-3">
                 <img src={logo} alt="LOGO" className='img-fluid footer_logo' />
             </div>
-            <div className="col-md-6">
+            <div className="col-6 col-lg-6">
                 <ul className="navList">
                     <li>
                         <a href="#">About Us</a>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div className="col-md-3">
+            <div className="col-3 col-lg-3">
                 <div className="social-icon">
                     <a href="#">
                         <img src={facebook} alt="Facebook" />
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         {/* contact detail with form */}
         <div className="row mt-4 pb-4">
-            <div className="col-md-5">
+            <div className="col-6 col-lg-5">
             <div className='heading w-50'>
                 <h2 className='service-h'>Contact Us</h2>
                 <ul className="address_detail">
@@ -56,7 +56,7 @@ const Footer = () => {
                 </ul>
            </div>
             </div>
-            <div className="col-md-7">
+            <div className="col-6 col-lg-7">
                 <div className="newsletter">
                     <input type="email" id="email" className='form-control custom_input' placeholder='Email....' />
                     <button className='btn btn-primary'>Submit</button>

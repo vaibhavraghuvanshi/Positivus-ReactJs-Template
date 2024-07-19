@@ -45,7 +45,7 @@ const Team = () => {
 
       <div className="row">
         {teamMembers.map((member, index) => (
-          <div className="col-md-4" key={index}>
+          <div className="col-6 col-lg-4" key={index}>
             <motion.div
               className="card"
               variants={cardVariants}
