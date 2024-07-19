@@ -2,6 +2,19 @@ import React from 'react'
 import iconGreen from "../assets/iconGreen.png"
 import {motion} from "framer-motion"
 
+
+const caseStudy_container ={
+  hidden: { y: 50,opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.4,
+      when: "beforeChildren"
+    }
+  }
+}
+
 const animateText = {
   hidden:{
     y:100,
@@ -13,7 +26,8 @@ const animateText = {
     transition:{
       ease: "easeInOut",
       delay: 0.4,
-      duration: 1
+      duration: 1,
+      type: "spring",
     },
   },
 }
@@ -39,7 +53,11 @@ const CaseStudies = () => {
         viewport={ {once: true, amount:0.4} }
         >Explore Real-Life Examples of Our Proven Digital Marketing<br/> Success through Our Case Studies</motion.p>
     </div>
-    <div className="case-studies">
+    <motion.div className="case-studies"
+     variants={caseStudy_container}
+     initial="hidden"
+     animate="show"
+    >
 
         <motion.div className="case_study_content"
         variants={animateText}
@@ -75,7 +93,7 @@ const CaseStudies = () => {
            </div>           
         </motion.div>
         
-    </div>
+    </motion.div>
     
 </section>
   )

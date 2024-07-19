@@ -6,6 +6,8 @@ import { easeInOut, motion } from 'framer-motion';
 const Header = () => {
 
   return (
+    <React.Fragment>
+
     <motion.div className='header'
     initial={{y: "-80vh"}}
     animate={{y: 0, transition:{ease: easeInOut,delay: 0.2, type: "spring", bounceStiffness:300}}}
@@ -24,6 +26,9 @@ const Header = () => {
         </ul>
       </nav>
     </motion.div>
+
+    </React.Fragment>
+    
   );
 }
 
